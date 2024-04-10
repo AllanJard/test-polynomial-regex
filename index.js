@@ -2,28 +2,28 @@
 let input = document.body;
 
 function test1 (str) {
-	let result = input.replace(/<[^>]*>/g, '');
+	let result = str.replace(/<[^>]*>/g, '');
 	
 	console.log(result);
 	return result;
 }
 
 function test2 (str) {
-	let result = input.replace(/(<[^>]*>)/g, '');
+	let result = str.replace(/(<[^>]*>)/g, '');
 	
 	console.log(result);
 	return result;
 }
 
 function test3 (str) {
-	let result = input.replace(/<([^>]*>)/g, '');
+	let result = str.replace(/<([^>]*>)/g, '');
 	
 	console.log(result);
 	return result;
 }
 
 function test4 (str) {
-	let result = input.replace(/(<([^>]*>))/g, '');
+	let result = str.replace(/(<([^>]*>))/g, '');
 	
 	console.log(result);
 	return result;
