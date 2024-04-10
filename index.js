@@ -46,6 +46,10 @@ function test4 (str) {
 }
 
 var dtStripHtml = function (input) {
+	if (! input.length) {
+		return input;
+	}
+
 	var previous;
 
 	input = input.replace(/<[^>]*>/g, ''); // Complete tags
