@@ -51,3 +51,10 @@ test4(input);
 
 console.log( dtStripHtml(input) );
 
+export default dtStripHtml;
+export {
+	test1,
+	test2,
+	test3,
+	test4
+};
