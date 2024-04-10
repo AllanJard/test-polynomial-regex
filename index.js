@@ -1,7 +1,11 @@
 
-let input = document.body;
+let input = '<td>mamma</td><td><strong>papa</strong></td>';
 
 function test1 (str) {
+	if (str.length > 100) {
+		throw new Error('Test 1');
+	}
+
 	let result = str.replace(/<[^>]*>/g, '');
 	
 	console.log(result);
@@ -9,6 +13,10 @@ function test1 (str) {
 }
 
 function test2 (str) {
+	if (str.length > 1000) {
+		throw new Error('Test 1');
+	}
+
 	let result = str.replace(/(<[^>]*>)/g, '');
 	
 	console.log(result);
@@ -16,6 +24,10 @@ function test2 (str) {
 }
 
 function test3 (str) {
+	if (str.length > 10000) {
+		throw new Error('Test 1');
+	}
+
 	let result = str.replace(/<([^>]*>)/g, '');
 	
 	console.log(result);
@@ -23,6 +35,10 @@ function test3 (str) {
 }
 
 function test4 (str) {
+	if (str.length > Math.pow(2, 28)) {
+		throw new Error('Test 1');
+	}
+
 	let result = str.replace(/(<([^>]*>))/g, '');
 	
 	console.log(result);
@@ -51,10 +67,10 @@ test4(input);
 
 console.log( dtStripHtml(input) );
 
-export default dtStripHtml;
-export {
-	test1,
-	test2,
-	test3,
-	test4
-};
+// export default dtStripHtml;
+// export {
+// 	test1,
+// 	test2,
+// 	test3,
+// 	test4
+// };
