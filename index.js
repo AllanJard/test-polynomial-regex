@@ -1,7 +1,7 @@
 
-let input = '<td>mamma</td><td><strong>papa</strong></td>';
+let input = argv[1];
 var _re_html = /<[^>]*>/g;
 
-console.log(input.replace(_re_html, ''));
+console.log(input.replace(/<[^>]*>/g, ''));
 
 console.log(input.replace(/(<[^>]*>)/g, ''));
