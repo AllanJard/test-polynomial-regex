@@ -1,5 +1,5 @@
 
-let input = '<td>mamma</td><td><strong>papa</strong></td>';
+let input = document.body;
 
 function test1 (str) {
 	let result = input.replace(/<[^>]*>/g, '');
