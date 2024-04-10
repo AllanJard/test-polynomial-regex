@@ -29,7 +29,25 @@ function test4 (str) {
 	return result;
 }
 
+var dtStripHtml = function (input) {
+	var previous;
+
+	input = input.replace(/<[^>]*>/g, ''); // Complete tags
+
+	// Safety for incomplete script tag - use do / while to ensure that
+	// we get all instances
+	do {
+		previous = input;
+		input = input.replace(/<script/i, '');
+	} while (input !== previous);
+
+	return previous;
+};
+
 test1(input);
 test2(input);
 test3(input);
 test4(input);
+
+console.log( dtStripHtml(input) );
+
